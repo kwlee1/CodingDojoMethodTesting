@@ -18,7 +18,6 @@ class Project
         return tasks
     end 
     def print_tasks
-        puts tasks 
-        return tasks 
+        @tasks.each { |elem| puts elem }
     end 
 end

@@ -23,6 +23,7 @@ RSpec.describe Project do
     expect(@project1.add_tasks("test")).to eq(["test"])
   end 
   it 'can print tasks' do 
-    expect(@project1.print_tasks).to eq([])
+    @project1.add_tasks("test")
+    expect{ @project1.print_tasks }.to output("test\n").to_stdout
   end 
 end
